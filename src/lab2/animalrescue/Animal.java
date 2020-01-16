@@ -1,6 +1,6 @@
 package lab2.animalrescue;
 
-public class Dog {
+public class Animal {
     public String name;
     public int age;
     public int healthCondition;
@@ -14,7 +14,7 @@ public class Dog {
         System.out.println("playing with ball");
     }
 
-    public static void validate (Dog dog) {
+    public static void validate (Animal dog) {
         // check if the value is within range
         if (dog.healthCondition < 1 || dog.healthCondition > 10) {
             throw new IllegalArgumentException("The value is outside the accepted range.");

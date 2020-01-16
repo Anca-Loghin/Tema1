@@ -3,14 +3,14 @@ package lab2.animalrescue;
 
 public class AppMain {
     public static void main(String[] args) {
-        Dog pet1 = new Dog();
+        Animal pet1 = new Animal();
         pet1.name = "Max";
         pet1.age = 3;
         pet1.healthCondition = 9;
         pet1.mood = 5;
         pet1.levelOfHunger = 7;
 
-        Dog pet2 = new Dog();
+        Animal pet2 = new Animal();
         pet2.name = "Kumba";
         pet2.age = 1;
         pet2.healthCondition = 10;
@@ -33,8 +33,8 @@ public class AppMain {
         vet.name = "Evan Antin";
         vet.specialization = "Anesthesia";
 
-        Dog.validate(pet1);
-        Dog.validate(pet2);
+        Animal.validate(pet1);
+        Animal.validate(pet2);
 
         System.out.println(pet2.name);
         pet1.setFavoriteFood();
