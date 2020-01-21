@@ -1,6 +1,22 @@
 package lab2.animalrescue;
 
 public class Adoption {
-    String name;
-    int moneyAmount;
+    private String name;
+    private int moneyAmount;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setMoneyAmount(int moneyAmount) {
+        this.moneyAmount = moneyAmount;
+    }
+
+    public int getMoneyAmount() {
+        return moneyAmount;
+    }
 }

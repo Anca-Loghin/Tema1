@@ -39,9 +39,10 @@ public class Main {
         float q = -3f;
         int p = 8;
         System.out.println(w*4 + q*w / p);
-        int d = 5;
+
+        int d = 15;
         int i = 3;
         int m = 8;
-        System.out.println(d + d*3 / i *2 - m % i);
+        System.out.println(d + d / i *2 - m % i);
     }
 }
