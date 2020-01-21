@@ -22,7 +22,7 @@ public class AppMain {
 
         Animal pet2 = new Animal();
 
-        pet2.setName ("Kumba");
+        pet2.setName ("Nico");
         System.out.println(pet2.getName());
 
         pet2.setAge (1);
