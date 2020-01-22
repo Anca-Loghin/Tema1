@@ -63,7 +63,6 @@ public class AppMain {
         recreational.setName("Run on the beach");
         System.out.println(recreational.getName());
 
-
         Vet vet = new Vet();
 
         vet.setName("Evan Antin");
@@ -71,6 +70,9 @@ public class AppMain {
 
         vet.setSpecialization("Anesthesia");
         System.out.println(vet.getSpecialization());
+
+        Animal.validate(pet1);
+
    }
 
 
