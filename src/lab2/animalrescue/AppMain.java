@@ -1,7 +1,7 @@
 package lab2.animalrescue;
 
 public class AppMain {
-   private static void main(String[] args) {
+   public static void main(String[] args) {
         Animal pet1 = new Animal();
 
         pet1.setName ("Max");
@@ -72,6 +72,8 @@ public class AppMain {
         vet.setSpecialization("Anesthesia");
         System.out.println(vet.getSpecialization());
    }
+
+
 }
 
 

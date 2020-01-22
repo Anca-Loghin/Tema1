@@ -27,7 +27,7 @@ public class Food {
         return quantity;
     }
 
-    public void set (){
+    public void setisAvailable (){
         this.isAvailable = isAvailable;
     }
     public boolean isAvailable(boolean b) {
