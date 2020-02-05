@@ -19,6 +19,12 @@ public class Animal {
     public void type(){
         System.out.println("What type is this animal?");
     }
+    public void type1(){
+        System.out.println("What type is this animal?");
+    }
+    public void type2(){
+        System.out.println("What type is this animal?");
+    }
 
 
 

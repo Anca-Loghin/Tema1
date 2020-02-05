@@ -77,8 +77,7 @@ public class AppMain {
         Amstie.setAge(2);
         Amstie.setHealthCondition(9);
 
-        Duck Gary = new Duck();
-        Gary.setColor("brown");
+
 
 
         Animal animal = new Animal();
@@ -111,6 +110,15 @@ public class AppMain {
         System.out.println();
         horse.sound();
         horse.type();
+
+        Dog Rex = new Dog();
+        System.out.println();
+        dog.type2();
+
+        Duck Gary = new Duck();
+        System.out.println();
+        Gary.setColor("brown");
+        duck.type();
 
 
    }

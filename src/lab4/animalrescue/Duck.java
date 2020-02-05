@@ -8,6 +8,9 @@ public class Duck extends Animal {
         super();
         System.out.println("A new duck has been created!");
     }
+    public void type(){
+        System.out.println("This animal has feathers");
+    }
 
 
 }
