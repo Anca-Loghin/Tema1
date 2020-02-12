@@ -1,6 +1,8 @@
 package lab5.Calculator;
 
 import java.sql.Array;
+import java.sql.SQLOutput;
+import java.util.HashSet;
 
 import static java.lang.System.*;
 
@@ -44,8 +46,8 @@ public class Main {
         // Apelati metoda in main() pentru a verifica daca functioneaza.
 
         String[] arr1 = {"Anca", "Andreea", "Vlad", "Doru", "Mihai", "Ana"};
-        //System.out.println(op.trueOrFalse(arr1, "Doru"));
-        //System.out.println(op.trueOrFalse(arr1, "Ada"));
+        System.out.println(op.trueOrFalse(arr1, "Doru"));
+        System.out.println(op.trueOrFalse(arr1, "Ada"));
 
         //6. Creati o metoda care sa primeasca un parametru de tip array de numere, populat cu valori, si un parametru
         // de tip numar. Metoda sa verifice daca numarul primit se afla in array-ul primit, si daca da, atunci sa
@@ -97,7 +99,7 @@ public class Main {
 
         LogicalOp logicalop = new LogicalOp();
 
-        System.out.println(logicalop.add(7,14));
+        System.out.println(logicalop.add(7, 14));
         System.out.println(logicalop.add(11, 14, 47));
         System.out.println(logicalop.add(12.123f, 11.354f, 1.5f));
         System.out.println(logicalop.add(14.33, 22.11));
@@ -105,6 +107,67 @@ public class Main {
         System.out.println(logicalop.add(14.3, 1.2, 3.1));
 
 
+        int[] array1 = {11, 13, 5, 17, 19, 21, 23};
+
+        System.out.println(op.returnAnotherArray(array1));
+
+        //Tema optionala
+
+        // 2. Creati o metoda care insereze un element pe o pozitie specifica intr-un array. nok
+
+        int[] arrayposition = { 14,25,26,88,45,33,21,11,22};
+        int indexposition = 3;
+        int newValue = 7;
+        for (int i = arrayposition.length-1; i> indexposition; i--){
+            arrayposition[i] = arrayposition[i-1];
+        }
+        arrayposition[indexposition] = newValue;
+        System.out.println((arrayposition));
+
+        // 3. Creati o metoda care sa gaseasca cel mai mare si cel mai mic numar dintr-un array.
+
+
+        // 4. Creati o metoda care sa inverseze valorile unui array de int-uri. ok
+
+        int[] ar = {22, 14, 15, 77, 896, 22, 77};
+        ar = op.invertedArray(ar);
+        op.printArray(ar);
+
+        // 5. Creati o metoda care sa gaseasca toate valorile duplicate dintr-un array.
+        //ok
+
+        int[] myarray1 = {11,12,14,11,15,17,14,19,22,19};
+        for (int i = 0; i < myarray1.length; i++){
+            for ( int j = i + 1; j < myarray1.length; j++){
+                if ((myarray1[i] == myarray1[j] && (i != j))){
+                    System.out.println("Duplicate element:" + myarray1[j]);
+                }
+            }
+        }
+
+        //6. Creati o metoda care sa gaseasca toate elementele comune intre doua array-uri (array de String).
+        // ok dar returneaza de 6 ori.
+        String[] arrayone = {"Rosu", "Verde", "Roz", "Maro", "Albastru", "Mov"};
+        String[] arraytwo = {"Galben", "Indigo", "Negru", "Argintiu", "Rosu"};
+        HashSet<String> h = new HashSet<String>();
+        for (int i = 0; i < arrayone.length; i++) {
+            for (int j = 0; j < arraytwo.length; j++) {
+                if (arrayone[i].equals(arraytwo[j])) {
+                    h.add(arrayone[i]);
+                }
+            }
+            System.out.println("Common element:" + (h));
+        }
+
+
+        // 7. Creati o metoda care sa primeasca un array de numere ne-ordonat, si sa il returneze ordonat crescator.
+        // ok
+
+
+        int[] arr = { 11,25,1,9,220,5,89,55,997};
+        op.printArray(op.sortAsc(arr));
+
+
+
     }
 }
-

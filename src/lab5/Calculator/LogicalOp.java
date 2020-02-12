@@ -44,14 +44,20 @@ public class LogicalOp {
         return average;
     }
 
-    //5. nok
-    //public static boolean trueOrFalse (String[] arr, String value){
-    //for (String i: arr){
-    // if(value == i){
-    //     return true;
-    // }
-    // return false;
-    // }
+    //5. ok
+    public boolean trueOrFalse (String[] arr, String value) {
+        boolean found = false;
+        for (String i : arr) {
+            if (value.equals(i)) {
+                found = true;
+
+                break;
+            } else {
+                return false;
+            }
+        }
+        return found;
+    }
 
     //6.ok
 
@@ -141,6 +147,55 @@ public class LogicalOp {
     public double add(double x, double y, double z){
         return  z-y-z;
     }
+
+ //Creati o metoda care sa inverseze valorile unui array de int-uri. 2 liste. descrescator in array .lenght minus
+
+ // Creati o metoda care sa primeasca un array de numere neordonat si sa il afiseze ordonat.
+
+
+
+    public int [] returnAnotherArray (int[] array1){
+    int[] newArray = new int[array1.length];
+        for (int i =0; i < array1.length; i++){
+           newArray[array1.length-1-i] = array1[i];
+        }
+        return newArray;
+
+    }
+
+    // Tema optiomala
+    //1.
+
+    //3.nok
+
+
+    //4.ok
+
+    public int[] invertedArray ( int[] array){
+        int[] newArray = new int[array.length];
+        for (int i = 0;  i < array.length; i++){
+            newArray[array.length-1-i] = array[i];
+        }
+        return newArray;
+    }
+
+    //7.ok
+    public int[] sortAsc(int[] array){
+        for ( int i = 0; i < array.length; i++){
+            for ( int j = i+1; j < array.length-1; j++){
+                if(array[i] > array[j]){
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        return array;
+    }
+
+
+    //6.
+
 
 
 
